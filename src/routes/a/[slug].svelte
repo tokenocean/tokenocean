@@ -453,19 +453,19 @@
       {/if}
 
       {#if compareAsc(parseISO(artwork.auction_start), now) === 1 && start_counter}
-        <div class="bg-gray-100 px-4 p-1 mt-6 rounded">
+        <div class="bg-offblack px-4 p-1 mt-6 rounded">
           <div class="mt-auto text-sm">Auction starts in</div>
           <div class="mt-1">{start_counter}</div>
         </div>
       {/if}
 
       {#if compareAsc(parseISO(artwork.auction_end), now) === 1 && end_counter}
-        <div class="bg-gray-100 px-4 p-1 mt-6 rounded">
+        <div class="bg-offblack px-4 p-1 mt-6 rounded">
           <div class="mt-auto text-sm">Auction closes in</div>
           <div class="mt-1">{end_counter}</div>
         </div>
       {:else if artwork.auction_end}
-        <div class="bg-gray-100 px-4 p-1 mt-6 rounded">
+        <div class="bg-offblack px-4 p-1 mt-6 rounded">
           <div class="mt-auto text-sm">Auction ended at</div>
           <div class="mt-1">
             {format(parseISO(artwork.auction_end), "yyyy-MM-dd HH:mm")}

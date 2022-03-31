@@ -121,12 +121,12 @@
       </div>
     </div>
     {#if end_counter}
-      <div class="p-3 rounded-b-lg lightblue-grad text-black mt-auto">
+      <div class="p-3 rounded-b-lg mt-auto">
         Time left:
         {end_counter}
       </div>
     {:else if start_counter}
-      <div class="p-3 rounded-b-lg lightblue-grad text-black mt-auto">
+      <div class="p-3 rounded-b-lg mt-auto">
         Auction starts in:
         {start_counter}
       </div>
