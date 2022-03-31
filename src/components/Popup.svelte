@@ -27,7 +27,7 @@
 <style>
   .band {
     color: white;
-    background-color: #3ba5ac;
+    background-color: #0cf574;
     box-shadow: 0 1px 5px rgb(0 0 0 / 18%);
     border-radius: 10px;
     margin-top: 10px;

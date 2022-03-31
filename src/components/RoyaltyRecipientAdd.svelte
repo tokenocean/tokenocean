@@ -78,7 +78,7 @@
     <div class="mt-1 rounded-md w-1/5 pt-8">
       <input
         type="submit"
-        class="primary-btn btn-sm cursor-pointer mx-auto"
+        class="bg-offblack text-white font-bold cursor-pointer mx-auto"
         value="Add Recipient"
       />
     </div>
@@ -96,5 +96,11 @@
     &:disabled {
       @apply bg-gray-100;
     }
+  }
+
+  input {
+    background-color: #131313;
+    color: white;
+    border: none;
   }
 </style>

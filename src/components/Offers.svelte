@@ -54,7 +54,11 @@
     <div
       on:click={(e) => (selectedSection = "received")}
       class={`
-      ${selectedSection === "received" ? "bg-primary font-bold" : "bg-gray-100"}
+      ${
+        selectedSection === "received"
+          ? "bg-secondary font-bold"
+          : "bg-offblack"
+      }
         rounded-l-lg
         px-6
         py-2.5
@@ -71,7 +75,7 @@
     <div
       on:click={(e) => (selectedSection = "made")}
       class={`
-      ${selectedSection === "made" ? "bg-primary font-bold" : "bg-gray-100"}
+      ${selectedSection === "made" ? "bg-secondary font-bold" : "bg-offblack"}
         rounded-r-lg
         px-6
         py-2.5

@@ -99,8 +99,7 @@
   <div class="flex flex-col mb-6">
     <label for="tags"
       >Tags
-      <span class="text-gray-400">(e.g. Abstract, monochromatic, etc)</span
-      ></label
+      <span>(e.g. Abstract, monochromatic, etc)</span></label
     >
     <Select
       id="tags"
@@ -113,7 +112,11 @@
     />
   </div>
   <div class="flex">
-    <button type="submit" class="primary-btn">Submit</button>
+    <button
+      type="submit"
+      class="rounded-full bg-offblack font-bold text-white p-2 w-full"
+      >Submit</button
+    >
   </div>
 </form>
 
@@ -134,15 +137,17 @@
   }
   input[type="checkbox"]:checked {
     appearance: none;
-    border: 5px solid #fff;
-    outline: 2px solid #6ed8e0;
-    background-color: #6ed8e0;
+    border: 5px solid #131313;
+    outline: 2px solid #0067d9;
+    background-color: #0067d9;
     padding: 2px;
     border-radius: 0;
   }
 
   input,
   textarea {
+    background-color: #131313;
+    color: white;
     @apply rounded-lg;
   }
 </style>

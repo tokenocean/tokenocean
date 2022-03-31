@@ -94,15 +94,15 @@
 <div class="container mx-auto pt-5 md:pt-20">
   {#if form}
     <div
-      class="mb-4 w-full sm:max-w-3xl md:shadow rounded-xl md:p-10 m-auto lg:flex-row  bg-white"
+      class="mb-4 w-full sm:max-w-3xl md:shadow rounded-xl md:p-10 m-auto lg:flex-row bg-secondary text-offblack"
     >
-      <a class="block mb-6 text-midblue" href={`/${$session.user.username}`}>
+      <a class="block mb-6 text-offblack" href={`/${$session.user.username}`}>
         <div class="flex">
           <Fa icon={faChevronLeft} class="my-auto mr-1" />
           <div>Back</div>
         </div>
       </a>
-      <h2 class="mb-10">Edit Profile</h2>
+      <h2 class="mb-10 text-offblack">Edit Profile</h2>
       <div class="flex mt-4 m-auto flex-col-reverse lg:flex-row">
         <form
           class="mb-6 flex-grow xl:mr-8"
@@ -164,7 +164,9 @@
             />
           </div>
           <div class="flex mt-8">
-            <button on:click|preventDefault={submit} class="primary-btn "
+            <button
+              on:click|preventDefault={submit}
+              class="bg-offblack rounded-full w-full font-bold text-white p-2"
               >Save details</button
             >
           </div>
@@ -196,7 +198,7 @@
 
 <style>
   .container {
-    background-color: #ecf6f7;
+    background-color: #000041;
     height: auto;
     min-height: 100vh;
     margin: 0;
@@ -205,7 +207,8 @@
 
   input,
   textarea {
-    @apply appearance-none border rounded py-4 px-3 text-gray-700 leading-tight;
+    @apply appearance-none border rounded py-4 px-3 text-white leading-tight;
+    background-color: #131313;
   }
 
   label {
@@ -221,14 +224,14 @@
     right: 15px;
     top: 15px;
     font-size: 20px;
-    color: #6ed8e0;
+    color: #0067d9;
   }
 
   input[type="checkbox"] {
     appearance: none;
-    border: 5px solid #6ed8e0;
-    outline: 1px solid #fff;
-    background-color: #fff;
+    border: 5px solid #0067d9;
+    outline: 1px solid #131313;
+    background-color: #131313;
     padding: 2px;
     border-radius: 0;
     width: 25px;
@@ -236,9 +239,9 @@
   }
 
   input[type="checkbox"]:checked {
-    border: 5px solid #fff;
-    outline: 2px solid #6ed8e0;
-    background-color: #6ed8e0;
+    border: 5px solid #131313;
+    outline: 2px solid #0067d9;
+    background-color: #0067d9;
   }
 
   @media only screen and (max-width: 1024px) {

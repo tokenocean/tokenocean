@@ -532,7 +532,7 @@
         class:showPopup
         class="popup"
       >
-        <span class="closeButton"><Fa icon={faTimes} /></span>
+        <span class="closeButton text-brightgreen"><Fa icon={faTimes} /></span>
         <Card
           {artwork}
           columns={1}
@@ -566,7 +566,7 @@
 
 <style>
   :global(.description a) {
-    color: #3ba5ac;
+    color: #0cf574;
   }
 
   .disabled {
@@ -592,7 +592,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: white;
+    background: #131313;
     scroll-behavior: contain;
     transform: scale(0);
   }
@@ -611,7 +611,6 @@
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background: whitesmoke;
     padding: 11px 15px;
     cursor: pointer;
   }
@@ -676,7 +675,7 @@
     }
 
     .show-more {
-      color: #3ba5ac;
+      color: #0cf574;
       font-weight: bold;
       text-align: right;
       margin-top: 10px;

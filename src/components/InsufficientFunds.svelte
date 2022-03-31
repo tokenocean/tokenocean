@@ -154,11 +154,11 @@
   $: if ($session.user) address = $session.user.address;
 </script>
 
-<div class="mb-2 rounded-lg">
+<div class="mb-2 rounded-lg text-offblack">
   <div class="flex w-full">
-    <h3 class="text-2xl flex-grow text-left">Add funds</h3>
+    <h3 class="text-2xl flex-grow text-left text-offblack">Add funds</h3>
     <button
-      class="closeBtn text-xl ml-auto font-thin w-10 h-10 bg-gray-100 rounded rounded-full"
+      class="closeBtn text-xl ml-auto font-thin w-10 h-10 bg-offblack text-brightgreen rounded rounded-full"
       on:click={() => ($prompt = undefined)}
     >
       <Fa icon={faTimes} />
@@ -204,8 +204,9 @@
         Funding through a confidential liquid address, bitcoin address, or
         lightning invoice is achieved by automatically converting to L-BTC
         through
-        <a href="https://coinos.io" style="color: #6ed8e0">coinos.io</a>. Funds
-        will be subject to counterparty risk during the conversion process.
+        <a href="https://coinos.io" class="text-brightgreen">coinos.io</a>.
+        Funds will be subject to counterparty risk during the conversion
+        process.
       </p>
 
       <p class="text-sm my-4">
@@ -219,7 +220,7 @@
         See
         <a
           href="https://help.blockstream.com/hc/en-us/articles/900000630846-How-do-I-get-Liquid-Bitcoin-L-BTC-"
-          style="color: #6ed8e0">this article</a
+          class="text-brightgreen">this article</a
         >
         for other methods of acquiring L-BTC.
       </p>
@@ -270,7 +271,7 @@
         <div class="flex justify-center">
           {#if tab === "liquid"}
             <button
-              class="justify-center flex center font-medium secondary-color uppercase mt-4 mr-4"
+              class="justify-center flex center font-medium text-brightgreen uppercase mt-4 mr-4"
               on:click={toggleConfidential}
             >
               <div class="my-auto mr-1">
@@ -281,7 +282,7 @@
           {/if}
           <button
             on:click={() => copy(address)}
-            class="justify-center flex center font-medium secondary-color uppercase mt-4"
+            class="justify-center flex center font-medium text-brightgreen uppercase mt-4"
           >
             <div>Copy {tab === "lightning" ? "invoice" : "address"}</div>
             <div class="my-auto ml-2">
@@ -297,7 +298,7 @@
 <style>
   .hover {
     @apply border-b-2;
-    border-bottom: 3px solid #6ed8e0;
+    border-bottom: 3px solid #0067d9;
   }
 
   .closeBtn {
@@ -308,7 +309,7 @@
     @apply mb-auto h-8 mx-2 md:mx-4 mt-6;
     &:hover {
       @apply border-b-2;
-      border-bottom: 3px solid #6ed8e0;
+      border-bottom: 3px solid #0067d9;
     }
   }
 </style>

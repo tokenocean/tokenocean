@@ -183,10 +183,10 @@
 
 <div class="container mx-auto py-20">
   <div
-    class="w-full mx-auto max-w-5xl bg-white md:p-14 rounded-xl submitArtwork boxShadow"
+    class="w-full mx-auto max-w-5xl bg-secondary text-offblack md:p-14 rounded-xl submitArtwork boxShadow"
   >
     <a
-      class="block mb-6 text-midblue"
+      class="block mb-6 text-offblack"
       href="."
       on:click|preventDefault={() => window.history.back()}
     >
@@ -195,7 +195,7 @@
         <div>Back</div>
       </div>
     </a>
-    <h2>Submit artwork</h2>
+    <h2 class="text-offblack">Submit artwork</h2>
     <div class="flex flex-wrap flex-col-reverse lg:flex-row">
       <div class="w-full lg:w-1/2 lg:pr-10">
         <div class:invisible={!loading}>
@@ -216,7 +216,7 @@
             />
             <div class="w-full bg-grey-light p-8">
               <div
-                class="font-light p-4 mx-auto max-w-xs text-center"
+                class="text-white font-light p-4 mx-auto max-w-xs text-center"
                 class:bg-primary={percent >= 100 && artwork.filename}
                 class:bg-yellow-200={percent < 100 || !artwork.filename}
                 style={width}
@@ -239,7 +239,7 @@
 
 <style>
   .container {
-    background-color: #ecf6f7;
+    background-color: #000041;
     width: 100% !important;
     min-height: 100vh;
     margin: 0;

@@ -32,12 +32,12 @@
         aria-hidden="true">&#8203;</span
       >
       <div
-        class="dialog inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        class="dialog inline-block align-bottom bg-secondary rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-headline"
       >
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <div class="bg-secondary px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class="sm:flex sm:items-start">
             <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
               <svelte:component this={$prompt} bind:this={comp} />
@@ -45,15 +45,21 @@
           </div>
         </div>
         {#if !hideControls}
-          <div class="border-t px-4 py-6 sm:px-6 sm:flex sm:flex-row-reverse">
+          <div
+            class="border-t border-offblack px-4 py-6 sm:px-6 sm:flex sm:flex-row-reverse"
+          >
             <button
               bind:this={ok}
               on:click={comp.submit}
-              class="primary-btn mb-2 sm:mb-0 sm:ml-2"
+              class="bg-offblack text-white rounded-full p-2 font-bold w-full hover:text-white mb-2 sm:mb-0 sm:ml-2"
             >
               Continue
             </button>
-            <button type="button" class="secondary-btn" on:click={cancel}>
+            <button
+              type="button"
+              class="bg-offblack text-white rounded-full p-2 font-bold w-full hover:text-white"
+              on:click={cancel}
+            >
               Cancel
             </button>
           </div>
@@ -64,11 +70,6 @@
 {/if}
 
 <style>
-  .secondary-btn {
-    background-color: whitesmoke;
-    border: 1px solid whitesmoke;
-  }
-
   @media only screen and (max-width: 640px) {
     .dialog-container {
       padding: 0;

@@ -119,7 +119,7 @@
     <div
       class="mb-4 w-full max-w-5xl md:shadow rounded-xl md:p-10 m-auto lg:flex-row bg-white"
     >
-      <a class="block mb-6 text-midblue" href={`/${$session.user.username}`}>
+      <a class="block mb-6 text-offblack" href={`/${$session.user.username}`}>
         <div class="flex">
           <Fa icon={faChevronLeft} class="my-auto mr-1" />
           <div>Back</div>
@@ -233,7 +233,7 @@
 
 <style>
   .container {
-    background-color: #ecf6f7;
+    background-color: #000041;
     height: auto;
     min-height: 100vh;
     margin: 0;
@@ -258,7 +258,7 @@
     right: 15px;
     top: 15px;
     font-size: 20px;
-    color: #6ed8e0;
+    color: #0067d9;
   }
 
   @media only screen and (max-width: 1024px) {

@@ -12,17 +12,22 @@
 
   const date = new Date();
   const year = date.getFullYear();
-
 </script>
 
-<div class="bg-black px-2 mt-24">
+<div class="bg-offblack px-2 mt-24">
   <div class="container footer mx-auto flex flex-wrap text-white pt-12">
     <div
-      class="flex flex-col text-sm w-full lg:w-2/4 mb-10 order-last lg:order-first">
-      <a href="/"><img src="/logo-white.svg" alt="logo" class="w-48" /></a>
+      class="flex flex-col text-sm w-full lg:w-2/4 mb-10 order-last lg:order-first"
+    >
+      <a href="/"><img src="/logo_stacked.png" alt="logo" class="w-48" /></a>
       <p class="mt-4">&copy;{year} {branding.projectName}</p>
-      <div class="flex items-center mt-12">
-        <p class="pr-3">Powered by:</p>
+      <div class="mt-12">
+        <p class="pb-3">Powered by:</p>
+        <img
+          src="/btc-logo.svg"
+          alt="bitcoin logo"
+          class="pb-3 text-white w-32"
+        />
         <img src="/liquid_logo.svg" alt="liquid network logo" />
       </div>
     </div>
@@ -33,55 +38,67 @@
           <a
             target="_blank"
             href={branding.urls.external.blog}
-            class="flex items-center"><div class="w-6 mr-1">
+            class="flex items-center"
+            ><div class="w-6 mr-1">
               <Fa icon={faRss} />
             </div>
-            Blog</a>
+            Blog</a
+          >
         </li>
         <li class="mb-2">
           <a
             target="_blank"
             href={branding.urls.external.twitter}
-            class="flex items-center"><div class="w-6 mr-1">
+            class="flex items-center"
+            ><div class="w-6 mr-1">
               <Fa icon={faTwitter} />
             </div>
-            Twitter</a>
+            Twitter</a
+          >
         </li>
         <li class="mb-2">
           <a
             target="_blank"
             href={branding.urls.external.discord}
-            class="flex items-center"><div class="w-6 mr-1">
+            class="flex items-center"
+            ><div class="w-6 mr-1">
               <Fa icon={faDiscord} size="sm" />
             </div>
-            Discord</a>
+            Discord</a
+          >
         </li>
         <li class="mb-2">
           <a
             target="_blank"
             href={branding.urls.external.telegram}
-            class="flex items-center"><div class="w-6 mr-1">
+            class="flex items-center"
+            ><div class="w-6 mr-1">
               <Fa icon={faTelegramPlane} />
             </div>
-            Telegram</a>
+            Telegram</a
+          >
         </li>
         <li class="mb-2">
           <a
             target="_blank"
             href={branding.urls.external.instagram}
-            class="flex items-center"><div class="w-6 mr-1">
+            class="flex items-center"
+            ><div class="w-6 mr-1">
               <Fa icon={faInstagramSquare} />
             </div>
-            Instagram</a>
+            Instagram</a
+          >
         </li>
         <li class="mb-2">
           <a
             target="_blank"
             href={branding.urls.external.facebook}
-            class="flex items-center"><div class="w-6 mr-1">
+            class="flex items-center"
+            ><div class="w-6 mr-1">
               <Fa icon={faFacebook} />
             </div>
-            Facebook</a>
+            Facebook</a
+          >
         </li>
       </ul>
     </div>

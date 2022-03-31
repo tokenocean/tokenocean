@@ -228,14 +228,14 @@
 
   .hover {
     @apply border-b-2;
-    border-bottom: 3px solid #6ed8e0;
+    border-bottom: 3px solid #0cf574;
   }
 
   .tabs div {
     @apply mb-auto h-10 mx-2 md:mx-4;
     &:hover {
       @apply border-b-2;
-      border-bottom: 3px solid #6ed8e0;
+      border-bottom: 3px solid #0cf574;
     }
   }
 
@@ -255,6 +255,6 @@
 
   .social-details span {
     margin-left: 8px;
-    color: #0f828a;
+    color: #0cf574;
   }
 </style>

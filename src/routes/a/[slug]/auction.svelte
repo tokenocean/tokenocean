@@ -405,15 +405,17 @@
 </script>
 
 <div class="container mx-auto md:p-20">
-  <div class="w-full max-w-4xl mx-auto bg-white md:p-10 rounded-xl">
-    <a class="block mb-6 text-midblue" href={`/a/${artwork.slug}`}>
+  <div
+    class="w-full max-w-4xl mx-auto bg-secondary text-offblack md:p-10 rounded-xl"
+  >
+    <a class="block mb-6 text-offblack" href={`/a/${artwork.slug}`}>
       <div class="flex">
         <Fa icon={faChevronLeft} class="my-auto mr-1" />
         <div>Back</div>
       </div>
     </a>
 
-    <h2>List artwork</h2>
+    <h2 class="text-offblack">List artwork</h2>
 
     {#if loading}
       <ProgressLinear />
@@ -454,7 +456,7 @@
               <label for="price"
                 >Price
                 <span class="tooltip">
-                  <i class="text-midblue text-xl tooltip">
+                  <i class="text-offblack text-xl tooltip">
                     <Fa icon={faQuestionCircle} pull="right" class="mt-1" />
                   </i>
                   <span class="tooltip-text bg-gray-100 shadow ml-4 rounded">
@@ -498,7 +500,7 @@
                     />
                     <span class="ml-3 text-xl">Royalty Recipients</span>
                     <span class="tooltip">
-                      <i class="ml-3 text-midblue text-xl tooltip">
+                      <i class="ml-3 text-offblack text-xl tooltip">
                         <Fa icon={faQuestionCircle} pull="right" class="mt-1" />
                       </i>
                       <span
@@ -598,7 +600,7 @@
                     <label>
                       Reserve price
                       <span class="tooltip">
-                        <i class="ml-3 text-midblue text-xl tooltip">
+                        <i class="ml-3 text-offblack text-xl tooltip">
                           <Fa
                             icon={faQuestionCircle}
                             pull="right"
@@ -631,7 +633,11 @@
           {/if}
         {/if}
         <div class="flex mt-10">
-          <button type="submit" class="primary-btn">Submit</button>
+          <button
+            type="submit"
+            class="bg-offblack rounded-full p-2 w-full font-bold text-white"
+            >Submit</button
+          >
         </div>
       </form>
     {/if}
@@ -640,7 +646,7 @@
 
 <style>
   .container {
-    background-color: #ecf6f7;
+    background-color: #000041;
     width: 100% !important;
     min-height: 100vh;
     margin: 0;
@@ -654,6 +660,11 @@
     }
   }
 
+  input {
+    background-color: #131313;
+    border: none;
+    color: white;
+  }
   .tooltip {
     cursor: pointer;
   }
@@ -671,17 +682,17 @@
 
   input[type="checkbox"]:checked {
     appearance: none;
-    border: 5px solid #fff;
-    outline: 2px solid #6ed8e0;
-    background-color: #6ed8e0;
+    border: 5px solid #131313;
+    outline: 2px solid #0067d9;
+    background-color: #0067d9;
     padding: 2px;
     border-radius: 0;
   }
 
   input[type="radio"]:checked {
     appearance: none;
-    border: 7px solid #6ed8e0;
-    background-color: #fff;
+    border: 7px solid #0067d9;
+    background-color: #131313;
     padding: 2px;
     border-radius: 100%;
   }

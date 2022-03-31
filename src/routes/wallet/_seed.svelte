@@ -108,7 +108,7 @@
     <textarea
       bind:value={typed}
       placeholder="Type or paste your seed here"
-      class="my-4 w-full"
+      class="my-4 w-full bg-offblack"
       on:blur={setMnemonic}
     />
   {:else}
@@ -123,6 +123,7 @@
                 on:keydown={(e) => keyup(i, e)}
                 key={i}
                 bind:this={inputs[i]}
+                class="bg-offblack"
               />
             {:else}
               <input
@@ -131,6 +132,7 @@
                 key={i}
                 bind:this={inputs[i]}
                 type="password"
+                class="bg-offblack"
               />
             {/if}
           </div>
@@ -146,6 +148,7 @@
                 on:keydown={(e) => keyup(i + 6, e)}
                 bind:this={inputs[i + 6]}
                 key={i + 6}
+                class="bg-offblack"
               />
             {:else}
               <input
@@ -154,6 +157,7 @@
                 bind:this={inputs[i + 6]}
                 key={i + 6}
                 type="password"
+                class="bg-offblack"
               />
             {/if}
           </div>

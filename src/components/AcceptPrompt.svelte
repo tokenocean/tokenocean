@@ -27,5 +27,5 @@
 </script>
 
 <div class="flex justify-between">
-  <h1 class="font-black text-4xl primary-color">Are you sure?</h1>
+  <h1 class="text-offblack text-4xl">Are you sure?</h1>
 </div>

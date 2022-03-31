@@ -41,6 +41,6 @@
 <style>
   div:hover,
   .favorited {
-    @apply text-primary cursor-pointer;
+    @apply text-brightgreen cursor-pointer;
   }
 </style>

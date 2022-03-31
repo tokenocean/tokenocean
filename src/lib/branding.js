@@ -1,45 +1,45 @@
 const BRANDING = {
-  projectName: "Raretoshi",
+  projectName: "Token Ocean",
 
-  superUserName: "raretoshi",
+  superUserName: "tokenocean",
 
   urls: {
-    base: "raretoshi.com",
-    www: "www.raretoshi.com",
-    protocol: "https://raretoshi.com",
+    base: "market.tokenocean.io",
+    www: "www.market.tokenocean.io",
+    protocol: "https://market.tokenocean.io",
     external: {
-      twitter: "https://twitter.com/raretoshi",
-      telegram: "https://t.me/raretoshi",
-      blog: "https://blog.raretoshi.com/",
-      facebook: "https://facebook.com/raretoshi",
-			instagram: "https://www.instagram.com/raretoshi/",
-			discord: "https://discord.gg/XUxPs3YnQz",
+      twitter: "https://twitter.com/tokenocean",
+      telegram: "https://t.me/tokenocean",
+      blog: "https://blog.tokenocean.io/",
+      facebook: "https://facebook.com/tokenocean",
+      instagram: "https://www.instagram.com/tokenocean/",
+      discord: "",
     },
   },
 
   meta: {
-    title: "Raretoshi",
+    title: "Token Ocean",
     keywords: "Bitcoin Liquid NFT Art",
     description:
       "Upload, collect, and transact rare digital art on the Liquid Network",
-    image: "https://raretoshi.com/splash.png",
-    url: "https://raretoshi.com/",
+    image: "https://market.tokenocean.io/splash.png",
+    url: "https://market.tokenocean.io/",
 
     twitter: {
       card: "summary_large_image",
-      creator: "@raretoshi",
-      site: "@raretoshi",
+      creator: "@tokenocean",
+      site: "@tokenocean",
     },
 
     artwork: (art) => ({
-      title: `Raretoshi - ${art.title}`,
+      title: `Token Ocean - ${art.title}`,
       image: `/api/ipfs/${art.filename}`,
-      url: `https://raretoshi.com/a/${art.slug}`,
+      url: `https://market.tokenocean.io/a/${art.slug}`,
     }),
   },
 
   emails: {
-    support: "support@raretoshi.com",
+    support: "support@tokenocean.com",
   },
 };
 

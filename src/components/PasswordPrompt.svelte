@@ -40,13 +40,13 @@
 
 <form on:submit|preventDefault={submit}>
   <div class="dialog-header">
-    <h3 id="modal-headline">Enter password</h3>
+    <h3 id="modal-headline" class="text-offblack">Enter password</h3>
     <button
       type="button"
-      class="closeBtn text-xl ml-auto font-thin w-10 h-10 bg-gray-100 rounded rounded-full"
+      class="closeBtn bg-offblack text-xl ml-auto font-thin w-10 h-10 rounded rounded-full"
       on:click={() => ($prompt = undefined)}
     >
-      <Fa icon={faTimes} />
+      <Fa icon={faTimes} class="text-brightgreen" />
     </button>
   </div>
   <div class="mt-2">
@@ -55,14 +55,14 @@
         <input
           bind:value={password}
           placeholder="Password"
-          class="w-full"
+          class="w-full border-none bg-offblack text-white"
           bind:this={input}
         />
       {:else}
         <input
           bind:value={password}
           placeholder="Password"
-          class="w-full"
+          class="w-full border-none bg-offblack text-white"
           type="password"
           bind:this={input}
         />
@@ -72,11 +72,14 @@
         type="button"
         on:click|preventDefault|stopPropagation={() => (show = !show)}
       >
-        <Fa icon={show ? faEyeSlash : faEye} class="my-auto mr-1" />
+        <Fa
+          icon={show ? faEyeSlash : faEye}
+          class="my-auto mr-1 text-brightgreen"
+        />
       </button>
     </div>
     <div class="text-right text-sm">
-      <a href="/forgot-password" class="block w-full text-midblue"
+      <a href="/forgot-password" class="block w-full text-offblack"
         >Forgot password?</a
       >
     </div>

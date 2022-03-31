@@ -232,11 +232,7 @@
                     <div class="my-auto flex">
                       <div class="flex">
                         {#if users[username]}
-                          <Avatar
-                            user={users[username]}
-                            overlay={username.includes("2of2") &&
-                              "/logo-graphic.png"}
-                          />
+                          <Avatar user={users[username]} />
                         {:else}
                           <Avatar
                             src="QmcbyjMMT5fFtoiWRJiwV8xoiRWJpSRwC6qCFMqp7EXD4Z"
@@ -282,11 +278,7 @@
                     <div class="my-auto flex">
                       <div class="flex">
                         {#if users[username]}
-                          <Avatar
-                            user={users[username]}
-                            overlay={username.includes("2of2") &&
-                              "/logo-graphic.png"}
-                          />
+                          <Avatar user={users[username]} />
                         {:else}
                           <Avatar
                             src="QmcbyjMMT5fFtoiWRJiwV8xoiRWJpSRwC6qCFMqp7EXD4Z"

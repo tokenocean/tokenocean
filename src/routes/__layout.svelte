@@ -73,7 +73,7 @@
       }
     } catch (e) {
       console.log(e);
-    } 
+    }
   };
 
   if (browser) {
@@ -93,9 +93,9 @@
     refreshInterval = setInterval(refresh, 60000);
     authCheckInterval = setInterval(authCheck, 5000);
 
-    unsubscribeFromSession = session.subscribe(value => {
+    unsubscribeFromSession = session.subscribe((value) => {
       value.user && checkAuthFromLocalStorage(value.user);
-    })
+    });
   }
 
   let open = false;

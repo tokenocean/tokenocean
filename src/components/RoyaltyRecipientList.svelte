@@ -52,7 +52,7 @@
 />
 <div class="rounded-lg mb-6">
   {#if items.length === 0}
-    <div class="bg-gray-200 w-full rounded-lg p-4 text-center">
+    <div class="bg-offblack text-white w-full rounded-lg p-4 text-center">
       <p>No Royalty Recipients</p>
     </div>
   {:else}

@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "raretoshi",
+      name: "tokenocean",
       watch: ["src"],
       script: "npm",
       args: "start",

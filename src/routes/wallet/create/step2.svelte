@@ -70,18 +70,18 @@
     padding: 7px;
   }
   .pagination:focus {
-    color: #6aced5;
+    color: #0cf574;
   }
 
   .active {
-    color: #6aced5;
+    color: #0cf574;
   }
 
   .word {
     padding: 10px;
     display: inline-block;
     border-radius: 10px;
-    background-color: whitesmoke;
+    background-color: #131313;
     font-weight: bold;
   }
 

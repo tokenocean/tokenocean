@@ -10,28 +10,36 @@
 <div class="flex justify-between items-center menu relative">
   <Search suggest={false} />
   <a sveltekit:prefetch href="/market"
-    ><button on:click={toggle}>Market</button></a
+    ><button on:click={toggle} class="text-white">Market</button></a
   >
   <a sveltekit:prefetch href="/activity"
-    ><button on:click={toggle}>Activity</button></a
+    ><button on:click={toggle} class="text-white">Activity</button></a
   >
   <a href={branding.urls.external.blog}
-    ><button on:click={toggle}>Blog</button></a
+    ><button on:click={toggle} class="text-white">Blog</button></a
   >
-  <a href="/help"><button on:click={toggle}>Help</button></a>
+  <a href="/help"><button on:click={toggle} class="text-white">Help</button></a>
   {#if $session?.user}
     {#if $session.user.is_admin}
-      <a href="/admin"><button on:click={toggle}>Admin</button></a>
+      <a href="/admin"
+        ><button on:click={toggle} class="text-white">Admin</button></a
+      >
     {/if}
     <a href={`/${$session.user?.username}`}>
       <button on:click={toggle} class="flex">
         <Avatar user={$session.user} />
       </button></a
     >
-  {:else}<a href="/login"><button on:click={toggle}>Sign In</button></a>{/if}
+  {:else}<a href="/login"
+      ><button on:click={toggle} class="text-white">Sign In</button></a
+    >{/if}
 </div>
 
 <style>
+  button:hover {
+    color: #0067d9;
+  }
+
   .menu button {
     width: auto;
     text-align: left;
@@ -39,14 +47,14 @@
   }
 
   .menu :global(.search) {
-    border: 1px solid lightgray;
+    border: 1px solid white;
     border-radius: 30px;
     margin-right: 15px;
     width: 250px;
   }
 
   .menu :global(.search):focus-within {
-    border: 1px solid #5c5d60;
+    border: 1px solid #0067d9;
     border-radius: 30px;
   }
 

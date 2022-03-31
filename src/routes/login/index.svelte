@@ -49,9 +49,13 @@
   };
 </script>
 
-<div class="form-container bg-lightblue px-4">
-  <form class="mb-6" on:submit|preventDefault={login} autocomplete="off">
-    <h2 class="mb-8">Sign In</h2>
+<div class="form-container bg-primary px-4">
+  <form
+    class="mb-6 bg-secondary text-offblack"
+    on:submit|preventDefault={login}
+    autocomplete="off"
+  >
+    <h2 class="mb-8 text-offblack">Sign In</h2>
     <div class="flex flex-col mb-4">
       <label class="mb-2 font-medium" for="first_name">Email or username</label>
       <input
@@ -59,16 +63,21 @@
         bind:this={emailInput}
         autocapitalize="off"
         data-cy="user"
+        class="bg-offblack border-none text-white"
       />
     </div>
     <div class="flex flex-col mb-4">
       <label class="mb-2 font-medium" for="last_name">Password</label>
       <div class="relative">
         {#if show}
-          <input class="w-full" bind:value={password} autocapitalize="off" />
+          <input
+            class="w-full bg-offblack border-none text-white"
+            bind:value={password}
+            autocapitalize="off"
+          />
         {:else}
           <input
-            class="w-full"
+            class="w-full bg-offblack border-none text-white"
             type="password"
             bind:value={password}
             autocapitalize="off"
@@ -80,17 +89,23 @@
           type="button"
           on:click|preventDefault|stopPropagation={() => (show = !show)}
         >
-          <Fa icon={show ? faEyeSlash : faEye} class="my-auto mr-1" />
+          <Fa
+            icon={show ? faEyeSlash : faEye}
+            class="my-auto mr-1 text-brightgreen"
+          />
         </button>
       </div>
     </div>
-    <a href="/forgot-password" class="block w-full text-midblue"
+    <a href="/forgot-password" class="block w-full text-offblack"
       >Forgot password?</a
     >
     <div class="flex my-5 justify-end">
-      <button class="primary-btn w-full" type="submit">Sign In</button>
+      <button
+        class="bg-offblack rounded-full p-2 text-white font-bold hover:text-white w-full"
+        type="submit">Sign In</button
+      >
     </div>
-    <a href="/register" class="text-midblue">Don't have an account? Sign up</a>
+    <a href="/register" class="text-offblack">Don't have an account? Sign up</a>
   </form>
 </div>
 
@@ -107,7 +122,7 @@
   .form-container form {
     width: 100%;
     max-width: 450px;
-    background-color: white;
+
     padding: 40px;
     box-shadow: 0 1px 5px rgb(0 0 0 / 18%);
     border-radius: 10px;
@@ -121,7 +136,6 @@
 
   @media only screen and (max-width: 640px) {
     .form-container {
-      background: none;
       height: auto;
     }
 

@@ -16,6 +16,46 @@
   $: if (ref) pageChange($page);
 </script>
 
+<div class="form-container bg-primary" key={$page.url.pathname}>
+  <form
+    class="mb-6 bg-secondary text-offblack"
+    on:submit|preventDefault={forgot}
+    autocomplete="off"
+  >
+    <h2 class="mb-8 text-offblack">Recover password</h2>
+    {#if sending}
+      <p class="my-4">
+        Thank you, please check your email for the recovery link.
+      </p>
+    {:else}
+      <p class="my-4">
+        We'll send a recovery link to the email associated with your account.
+      </p>
+      <div class="flex flex-col mb-4">
+        <label class="mb-2 font-medium" for="email">Email</label>
+        <input
+          placeholder="Email"
+          bind:value={email}
+          class="bg-offblack border-none text-white"
+          bind:this={ref}
+        />
+      </div>
+      <div class="flex">
+        <button
+          class="bg-offblack text-white rounded-full p-2 w-full font-bold ml-auto mb-4 hover:text-white"
+          type="submit">Send</button
+        >
+      </div>
+    {/if}
+    <a href="/login" class="text-offblack">
+      <div class="flex">
+        <Fa icon={faChevronLeft} class="my-auto mr-1" />
+        <div>Back to sign in</div>
+      </div>
+    </a>
+  </form>
+</div>
+
 <style>
   .form-container {
     width: 100%;
@@ -29,14 +69,14 @@
   .form-container form {
     width: 100%;
     max-width: 450px;
-    background-color: white;
+
     padding: 40px;
     box-shadow: 0 1px 5px rgb(0 0 0 / 18%);
     border-radius: 10px;
   }
 
   input {
-    @apply appearance-none border rounded text-gray-700 leading-tight;
+    @apply appearance-none border rounded leading-tight;
     padding: 0;
     padding: 10px;
   }
@@ -54,31 +94,3 @@
     }
   }
 </style>
-
-<div class="form-container bg-lightblue" key={$page.url.pathname}>
-  <form class="mb-6" on:submit|preventDefault={forgot} autocomplete="off">
-    <h2 class="mb-8">Recover password</h2>
-    {#if sending}
-      <p class="my-4">
-        Thank you, please check your email for the recovery link.
-      </p>
-    {:else}
-      <p class="my-4">
-        We'll send a recovery link to the email associated with your account.
-      </p>
-      <div class="flex flex-col mb-4">
-        <label class="mb-2 font-medium text-gray-600" for="email">Email</label>
-        <input placeholder="Email" bind:value={email} bind:this={ref} />
-      </div>
-      <div class="flex">
-        <button class="primary-btn ml-auto mb-4" type="submit">Send</button>
-      </div>
-    {/if}
-    <a href="/login" class="text-midblue">
-      <div class="flex">
-        <Fa icon={faChevronLeft} class="my-auto mr-1" />
-        <div>Back to sign in</div>
-      </div>
-    </a>
-  </form>
-</div>

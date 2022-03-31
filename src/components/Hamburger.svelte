@@ -3,7 +3,7 @@
 </script>
 
 <span
-  class="text-gray-500 hover:text-gray-700 cursor-pointer border-none focus:outline-none p-0"
+  class="cursor-pointer border-none focus:outline-none p-0"
   class:open
   on:click={() => (open = !open)}
 >
@@ -18,7 +18,7 @@
   svg {
     min-height: 20px;
     transition: transform 0.3s ease-in-out;
-    color: #2d2e32;
+    color: #0cf574;
   }
 
   svg line {

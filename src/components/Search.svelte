@@ -68,12 +68,12 @@
   <form on:submit|preventDefault={submit}>
     <div class="flex">
       <input
-        class="lg:w-1/3 border-0 border-b-2 rounded-none border-lightblue"
+        class="lg:w-1/3 border-0 border-b-2 rounded-none border-brightgreen bg-primary text-white"
         placeholder="Search..."
         on:input={({ target: { value } }) => debounce(value)}
       />
       <div class="my-auto ml-2">
-        <Fa icon={faSearch} />
+        <Fa icon={faSearch} class="text-white" />
       </div>
     </div>
 
@@ -114,3 +114,9 @@
     {/if}
   </form>
 </div>
+
+<style>
+  ::placeholder {
+    color: white;
+  }
+</style>

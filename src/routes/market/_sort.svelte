@@ -1,12 +1,11 @@
 <script>
   import { differenceInMilliseconds } from "date-fns";
   import { sortCriteria } from "$lib/store";
-
 </script>
 
 <div class="sort-container">
   <select
-    class="rounded-full appearance-none bg-gray-100 px-8"
+    class="rounded-full appearance-none bg-primary px-8"
     bind:value={$sortCriteria}
   >
     <option value="newest">Newest</option>

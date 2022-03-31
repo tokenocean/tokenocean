@@ -28,7 +28,7 @@
       </div>
     </div>
     <a href={`/a/${artwork.slug}`}>
-      <div class="w-full flex rounded-lg box-shadow thumb">
+      <div class="w-full flex rounded-lg thumb">
         <ArtworkMedia {artwork} showDetails={false} />
       </div>
     </a>

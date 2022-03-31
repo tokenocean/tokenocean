@@ -39,14 +39,16 @@
 
 <div class="flex header-container mx-auto justify-center marg-bottom">
   <div class="header text-center">
-    <h1 class="text-left md:text-center md:w-full">
+    <h1 class="text-left md:text-center md:w-full text-brightgreen">
       {branding.projectName}
-      <br />digital art
+      <br /><span class="text-white">market</span>
     </h1>
-    <h5 class="md:max-w-lg mx-auto text-left md:text-center">
-      Upload, collect, and transact rare digital art on the Liquid Network
+    <h5 class="md:max-w-lg mx-auto text-left md:text-center text-white">
+      Buy, sell, and collect digital art using the <span
+        class="text-bitcoin font-bold">bitcoin</span
+      > Liquid Network.
     </h5>
-    <a class="primary-btn" href={`/market`}>Start exploring</a>
+    <a class="primary-btn" href={`/market`}>Explore the Ocean</a>
   </div>
 </div>
 
@@ -149,7 +151,6 @@
   .header h5 {
     font-size: 22px;
     line-height: 36px;
-    color: #2d2e32;
     margin-top: 24px;
     margin-bottom: 34px;
   }

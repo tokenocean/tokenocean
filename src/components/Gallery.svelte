@@ -115,7 +115,7 @@
   </div>
 </div>
 
-<div class="full-width flex bg-white p-4 mx-auto">
+<div class="full-width flex bg-primary p-4 mx-auto">
   <div class="mx-auto">
     {#each pages as _, i}
       <button

@@ -79,7 +79,7 @@
       </div>
     {/if}
 
-    <div class="dark-bg mb-2 pt-1 sm:rounded-lg">
+    <div class="bg-offblack/75 mb-2 pt-1 sm:rounded-lg">
       <div
         class={`border-l-8 text-center p-3 text-white text-xl w-1/2 rounded-r-full mt-5 font-bold ${border(
           $asset
@@ -97,7 +97,7 @@
       </div>
       {#if $pending && val($asset, $pending[$asset])}
         <div class="m-6">
-          <div class="text-sm light-color">Pending</div>
+          <div class="text-sm text-offblack">Pending</div>
           <div class="flex mt-3">
             <span class="light-color mr-3"
               >{$pending && val($asset, $pending[$asset] || 0)}</span
@@ -136,7 +136,7 @@
     background: #31373e;
   }
   .border-blue {
-    border-color: #6ed8e0;
+    border-color: #0067d9;
   }
 
   .bg-btc {
