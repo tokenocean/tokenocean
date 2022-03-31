@@ -103,7 +103,7 @@
       </ul>
     </div>
     <div class="w-full lg:w-1/4 mb-10">
-      <h4 class="font-bold mb-4">Help</h4>
+      <h4 class="font-bold mb-4">More Information</h4>
       <ul class="list-none">
         <li class="mb-2"><a href="/help">Help</a></li>
         <li class="mb-2">
