@@ -15,9 +15,6 @@
   <a sveltekit:prefetch href="/activity"
     ><button on:click={toggle} class="text-white">Activity</button></a
   >
-  <a href={branding.urls.external.blog}
-    ><button on:click={toggle} class="text-white">Blog</button></a
-  >
   <a href="/help"><button on:click={toggle} class="text-white">Help</button></a>
   {#if $session?.user}
     {#if $session.user.is_admin}

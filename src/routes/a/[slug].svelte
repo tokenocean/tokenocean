@@ -426,7 +426,7 @@
                   <div class="mt-1 relative rounded-md shadow-sm">
                     <input
                       id="price"
-                      class="form-input block w-full pl-7"
+                      class="bg-offblack form-input block w-full pl-7"
                       placeholder={val(0)}
                       bind:value={amount}
                       bind:this={amountInput}

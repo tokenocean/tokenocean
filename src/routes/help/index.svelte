@@ -94,13 +94,6 @@
         <ul>
           <li>
             <a
-              href={branding.urls.external.discord}
-              target="_blank"
-              rel="noreferrer">Chat with support</a
-            >
-          </li>
-          <li>
-            <a
               href="mailto:{branding.emails.support}"
               target="_blank"
               rel="noreferrer">Email support</a

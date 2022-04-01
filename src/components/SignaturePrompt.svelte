@@ -59,7 +59,7 @@
   Loading
 {:then p}
   <div class="flex justify-between">
-    <h1 class="font-black text-4xl primary-color">Sign transaction</h1>
+    <h1 class="text-offblack text-4xl primary-color">Sign transaction</h1>
   </div>
 
   <Transaction summary={true} />
