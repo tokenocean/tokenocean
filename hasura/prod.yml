@@ -12,7 +12,7 @@ services:
     depends_on:
       - hbp
     container_name: lapp
-    image: gcr.io/coinos-326717/github.com/tokenocean/tokenocean-ui:master
+    image: gcr.io/coinos-326717/github.com/tokenocean/tokenocean-server:master
     restart: on-failure
     environment:
       NODE_ENV: production
