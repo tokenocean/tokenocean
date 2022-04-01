@@ -4,6 +4,6 @@ module.exports = {
     protocol: "https://market.tokenocean.io",
   },
   emails: {
-    support: "support@tokenocean.com",
+    support: "support@tokenocean.io",
   },
 };

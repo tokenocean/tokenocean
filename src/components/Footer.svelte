@@ -1,13 +1,7 @@
 <script>
   import branding from "$lib/branding";
   import Fa from "svelte-fa";
-  import {
-    faFacebook,
-    faInstagramSquare,
-    faTelegramPlane,
-    faDiscord,
-    faTwitter,
-  } from "@fortawesome/free-brands-svg-icons";
+  import { faTiktok, faTwitter } from "@fortawesome/free-brands-svg-icons";
   import { faRss } from "@fortawesome/free-solid-svg-icons";
 
   const date = new Date();
@@ -32,19 +26,8 @@
       </div>
     </div>
     <div class="w-full lg:w-1/4 mb-10">
-      <h4 class="font-bold mb-4">Join Us</h4>
+      <h4 class="font-bold mb-4">Follow Us</h4>
       <ul class="list-none">
-        <li class="mb-2">
-          <a
-            target="_blank"
-            href={branding.urls.external.blog}
-            class="flex items-center"
-            ><div class="w-6 mr-1">
-              <Fa icon={faRss} />
-            </div>
-            Blog</a
-          >
-        </li>
         <li class="mb-2">
           <a
             target="_blank"
@@ -56,48 +39,16 @@
             Twitter</a
           >
         </li>
+
         <li class="mb-2">
           <a
             target="_blank"
-            href={branding.urls.external.discord}
+            href={branding.urls.external.tiktok}
             class="flex items-center"
             ><div class="w-6 mr-1">
-              <Fa icon={faDiscord} size="sm" />
+              <Fa icon={faTiktok} />
             </div>
-            Discord</a
-          >
-        </li>
-        <li class="mb-2">
-          <a
-            target="_blank"
-            href={branding.urls.external.telegram}
-            class="flex items-center"
-            ><div class="w-6 mr-1">
-              <Fa icon={faTelegramPlane} />
-            </div>
-            Telegram</a
-          >
-        </li>
-        <li class="mb-2">
-          <a
-            target="_blank"
-            href={branding.urls.external.instagram}
-            class="flex items-center"
-            ><div class="w-6 mr-1">
-              <Fa icon={faInstagramSquare} />
-            </div>
-            Instagram</a
-          >
-        </li>
-        <li class="mb-2">
-          <a
-            target="_blank"
-            href={branding.urls.external.facebook}
-            class="flex items-center"
-            ><div class="w-6 mr-1">
-              <Fa icon={faFacebook} />
-            </div>
-            Facebook</a
+            TikTok</a
           >
         </li>
       </ul>

@@ -9,11 +9,7 @@ const BRANDING = {
     protocol: "https://market.tokenocean.io",
     external: {
       twitter: "https://twitter.com/tokenocean",
-      telegram: "https://t.me/tokenocean",
-      blog: "https://blog.tokenocean.io/",
-      facebook: "https://facebook.com/tokenocean",
-      instagram: "https://www.instagram.com/tokenocean/",
-      discord: "",
+      tiktok: "https://www.tiktok.com/@tokenocean.io",
     },
   },
 
@@ -39,7 +35,7 @@ const BRANDING = {
   },
 
   emails: {
-    support: "support@tokenocean.com",
+    support: "support@tokenocean.io",
   },
 };
 
