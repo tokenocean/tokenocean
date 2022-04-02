@@ -64,6 +64,9 @@
         <li class="mb-2">
           <a href="/terms-and-conditions">Terms of Service</a>
         </li>
+        <li class="mb-2">
+          <a href="https://tokenocean.io">White Label</a>
+        </li>
       </ul>
     </div>
   </div>
