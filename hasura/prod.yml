@@ -4,7 +4,7 @@ services:
     depends_on:
       - lapp
     container_name: ui
-    image: gcr.io/coinos-326717/github.com/tokenocean/tokenocean:staging
+    image: gcr.io/coinos-326717/github.com/tokenocean/tokenocean-ui:master
     restart: on-failure
     ports:
       - "3000:3000"
@@ -12,7 +12,7 @@ services:
     depends_on:
       - hbp
     container_name: lapp
-    image: gcr.io/coinos-326717/github.com/tokenocean/tokenocean:staging
+    image: gcr.io/coinos-326717/github.com/tokenocean/tokenocean-server:master
     restart: on-failure
     environment:
       NODE_ENV: production
