@@ -93,6 +93,7 @@ services:
       SMTP_USER: "${SMTP_USER}"
       SMTP_PASS: "${SMTP_PASS}"
       SMTP_SENDER: "${SMTP_SENDER}"
+      SMTP_SECURE: "true"
     volumes:
       - ./custom:/app/custom
   ipfs:
