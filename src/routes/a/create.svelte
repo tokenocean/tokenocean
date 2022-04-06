@@ -222,10 +222,12 @@
                 style={width}
               >
                 {#if percent < 100}
-                  {percent}%
+                  <span class="text-white">{percent}%</span>
                 {:else if artwork.filename}
                   Upload complete!
-                {:else}Processing...{/if}
+                {:else}
+                  <span class="text-offblack">Processing...</span>
+                {/if}
               </div>
             </div>
           </div>
