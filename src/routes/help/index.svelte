@@ -11,6 +11,56 @@
     <h2 class="mb-10">FAQ</h2>
     <div class="faq-content">
       <div class="faq">
+        <h3>Dive in</h3>
+        <p class="!mb-5 font-bold">
+          Welcome to tokenocean.io, you're ready to mint your first NFT!
+        </p>
+        <ol class="list-decimal space-y-4 px-10 mb-[80px]">
+          <li>
+            You will need a bitcoin, liquid, or lightning wallet, we recommend <a
+              href="https://coinos.io"
+              target="_blank"
+              rel="noreferrer">coinos.io</a
+            >
+            which is the easiest for all three -- click
+            <b>register an account</b>, create a username and password, and you
+            now have a liquid wallet.
+          </li>
+          <li>
+            You will need to fund this wallet (bitcoin - we recommend <a
+              href="https://kraken.com"
+              target="_blank"
+              rel="noreferrer">Kraken</a
+            >
+            they are available in many countries or you can locate a
+            <a href="https://coinatmradar.com" target="_blank" rel="noreferrer"
+              >bitcoin ATM</a
+            >
+            in your area,
+            <a
+              href="https://thebitcoinmanual.com/buying-btc/lightning/"
+              target="_blank"
+              rel="noreferrer">lightning</a
+            >,
+            <a
+              href="https://help.blockstream.com/hc/en-us/articles/900000630846-How-do-I-get-Liquid-Bitcoin-L-BTC"
+              target="_blank"
+              rel="noreferrer">liquid</a
+            >). As it's only 3 cents to mint, 5000 sats or $3 will do for your
+            first 100 NFTs.
+          </li>
+          <li>
+            Create an account on <a href="/register"
+              >https://market.tokenocean.io</a
+            > and go through all of the steps.
+          </li>
+          <li>
+            Fund the Token Ocean liquid wallet from your liquid/coinos wallet.
+            Wait 120 seconds.
+          </li>
+          <li>Now you should be able <b>Submit a new artwork</b>.</li>
+        </ol>
+
         <h3>What's an NFT?</h3>
 
         <p>
@@ -51,9 +101,10 @@
 
         <p>
           {branding.projectName} is the first NFT platform that uses the Bitcoin
-          Liquid Network instead of Ethereum or Counterparty. The Liquid Network
-          is a Bitcoin layer-2 solution and sidechain where transaction fees are
-          denominated in Liquid Bitcoin (L-BTC), which is pegged 1:1 to bitcoin.
+          Liquid Network instead of Ethereum, Counterparty, or any other centralized,
+          expensive, and hackable altcoins. The Liquid Network is a Bitcoin layer-2
+          solution and sidechain where transaction fees are denominated in Liquid
+          Bitcoin (L-BTC), which is pegged 1:1 to bitcoin.
           <br />
           <br />
 
@@ -72,7 +123,11 @@
         <p>
           Currently, it is 50 sats (0.0000005 BTC) or less than three cents per
           asset issuance, and 100 sats (0.000001 BTC) for listing and auctions.
-          The lowest bid price allowed is 1,000 sats (0.00001 BTC).
+          That's a notable difference from say Ethereum which is typically
+          $50-250 USD to mint as of writing this. The lowest bid price allowed
+          is 1,000 sats (0.00001 BTC). The only pricing we have other than the
+          cost of using the liquid network, is we charge a 3% transaction fee on
+          every sale. Easy peasy.
         </p>
 
         <h3>How do I get some L-BTC?</h3>
