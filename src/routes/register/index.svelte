@@ -52,9 +52,7 @@
       <ProgressLinear />
     {:else if registered}
       <h2 class="mb-8 text-offblack">Registered!</h2>
-      <p>
-        Thanks for registering. Please check your email for an activation link.
-      </p>
+      <p>Thanks for registering, you can now sign in.</p>
 
       <p class="mt-4">
         <a href="/login" class="text-offblack">Continue to sign in page</a>
