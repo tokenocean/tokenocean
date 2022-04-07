@@ -1,6 +1,6 @@
 # Token Ocean
 
-LNFT is a web-based platform for issuing and transacting with non-fungible tokens on the [Bitcoin Liquid Network](https://blockstream.com/liquid/). Blockstream is sponsoring its development and hosting an exemplary curated instance of it for use by Bitcoin artists at [Raretoshi](https://raretoshi.com).
+Token Ocean is a web-based platform for issuing and transacting with non-fungible tokens on the [Bitcoin Liquid Network](https://blockstream.com/liquid/). Blockstream is sponsoring its development and hosting an exemplary curated instance of it for use by Bitcoin artists at [Raretoshi](https://raretoshi.com).
 
 Anyone can adapt the platform to host their own Liquid-based NFT site.
 
@@ -50,8 +50,6 @@ Anyone can adapt the platform to host their own Liquid-based NFT site.
 
 ## Setup local development environment
 
-    git clone https://github.com/liquidnft/lnft
-    cd lnft
     pnpm install
     cd hasura
     cp .env.sample .env
