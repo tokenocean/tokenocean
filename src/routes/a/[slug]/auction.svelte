@@ -406,7 +406,7 @@
 
 <div class="container mx-auto md:p-20">
   <div
-    class="w-full max-w-4xl mx-auto bg-secondary text-offblack md:p-10 rounded-xl"
+    class="w-full max-w-4xl mx-auto bg-secondary text-offblack p-2 md:p-10 rounded-xl"
   >
     <a class="block mb-6 text-offblack" href={`/a/${artwork.slug}`}>
       <div class="flex">

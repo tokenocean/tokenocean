@@ -28,7 +28,7 @@
   } from "$lib/store";
   import { Dropzone, ProgressLinear } from "$comp";
   import { upload, supportedTypes } from "$lib/upload";
-  import { btc, kebab, goto, err } from "$lib/utils";
+  import { btc, kebab, goto, err, info } from "$lib/utils";
   import { requirePassword } from "$lib/auth";
   import {
     createIssuance,
@@ -173,6 +173,7 @@
         .json();
 
       goto(`/a/${slug}`);
+      info("Artwork created successfully! You can now list it on the market.");
     } catch (e) {
       console.log(e);
       err(e);
@@ -222,7 +223,7 @@
                 style={width}
               >
                 {#if percent < 100}
-                  <span class="text-white">{percent}%</span>
+                  <span class="text-offblack">{percent}%</span>
                 {:else if artwork.filename}
                   Upload complete!
                 {:else}
