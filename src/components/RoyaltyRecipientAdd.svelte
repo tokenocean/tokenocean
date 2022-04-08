@@ -40,7 +40,7 @@
   autocomplete="off"
   on:submit|preventDefault={onSubmit}
 >
-  <div class="flex flex-wrap w-full mb-4">
+  <div class="flex flex-wrap w-full md:mb-4">
     <div class="mt-1 rounded-md md:w-4/5 w-full md:pr-6">
       <label for="recipientName">Name</label>
       <input
@@ -51,7 +51,7 @@
         id="recipientName"
       />
     </div>
-    <div class="mt-1 rounded-md md:w-1/5 w-1/2">
+    <div class="mt-1 rounded-md md:w-1/5">
       <label for="recipientAmount">Rate (%)</label>
       <input
         class="form-input block w-full pl-4 pr-1"
@@ -64,8 +64,8 @@
       />
     </div>
   </div>
-  <div class="flex w-full mb-4">
-    <div class="mt-1 rounded-md w-4/5 pr-6">
+  <div class="md:flex w-full mb-4">
+    <div class="mt-1 rounded-md w-full md:w-4/5 md:pr-6">
       <label for="recipientAddress">Address</label>
       <input
         class="form-input block w-full pl-4 pr-4"
@@ -75,10 +75,10 @@
         id="recipientAddress"
       />
     </div>
-    <div class="mt-1 rounded-md w-1/5 pt-8">
+    <div class="mt-1 rounded-md w-full md:w-1/5 pt-4 md:pt-8">
       <input
         type="submit"
-        class="bg-offblack text-white font-bold cursor-pointer mx-auto"
+        class="bg-offblack text-white font-bold cursor-pointer mx-auto w-full"
         value="Add Recipient"
       />
     </div>
