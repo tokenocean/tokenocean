@@ -48,7 +48,7 @@
         class="text-bitcoin font-bold">bitcoin</span
       > Liquid Network.
     </h5>
-    <a class="primary-btn" href={`/market`}>Explore the Ocean</a>
+    <a class="primary-btn" href={`/market`}>Explore the market</a>
   </div>
 </div>
 
