@@ -213,7 +213,7 @@
 {/if}
 
 {#if $addresses && tx}
-  <div class="w-full mx-auto text-offblack">
+  <div class="w-full mx-auto text-white">
     <div
       class="grid grid-cols-1 gap-4"
       class:sm:grid-cols-2={!summary}
