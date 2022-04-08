@@ -61,6 +61,10 @@
   onDestroy(() => clearTimeout(poll));
 </script>
 
+<a href="/a/create" class="primary-btn mb-5" data-cy="new-artwork"
+  >Submit a new artwork</a
+>
+
 {#if $balances && $pending}
   <div class="w-full">
     {#if $assets.length > 1}
