@@ -94,18 +94,6 @@ const tickers = {
     precision: 8,
     decimals: 8,
   },
-  [cad]: {
-    name: "Liquid CAD",
-    ticker: "L-CAD",
-    precision: 8,
-    decimals: 2,
-  },
-  [usd]: {
-    name: "Liquid USDt",
-    ticker: "L-USDt",
-    precision: 8,
-    decimals: 2,
-  },
 };
 
 const ticker = (asset) => {
