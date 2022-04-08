@@ -29,7 +29,11 @@
     >
   {:else}<a href="/login"
       ><button on:click={toggle} class="text-white">Sign In</button></a
-    >{/if}
+    >
+    <a href="/register"
+      ><button on:click={toggle} class="text-white">Sign Up</button></a
+    >
+  {/if}
 </div>
 
 <style>
