@@ -295,7 +295,7 @@
           <div
             class="flex ml-auto py-1 px-4 bg-gray-100 rounded rounded-full my-auto"
           >
-            <div class="my-auto">
+            <div class="my-auto text-offblack">
               <Fa icon={faImage} class="mr-1" />
             </div>
             <div class="my-auto mb-1">
