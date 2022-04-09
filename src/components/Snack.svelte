@@ -20,9 +20,9 @@
 {#if $snack}
   <div class="snack-container flex">
     <div class="snack" class:info class:error>
-      <div class="flex-grow mr-2">{$snack.msg}</div>
+      <div class="flex-grow mr-2 text-offblack">{$snack.msg}</div>
       <button
-        class="ml-auto my-auto w-auto"
+        class="ml-auto my-auto w-auto text-offblack"
         on:click={() => ($snack = undefined)}
       >
         <Fa icon={faTimes} />
@@ -44,7 +44,7 @@
   }
 
   .snack.info {
-    background: #0067d9;
+    background: #0cf574;
   }
 
   .snack.error {
