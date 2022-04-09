@@ -299,7 +299,7 @@
               <Fa icon={faImage} class="mr-1" />
             </div>
             <div class="my-auto mb-1">
-              <span class="text-sm">Physical artwork</span>
+              <span class="text-sm text-offblack">Physical artwork</span>
             </div>
           </div>
         {/if}
