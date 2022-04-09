@@ -1,4 +1,5 @@
 <script context="module">
+  import { get } from "$lib/api";
   export async function load({ fetch, params: { slug }, session }) {
     if (!(session && session.user))
       return {
@@ -7,6 +8,8 @@
       };
 
     const props = await fetch(`/artworks/${slug}.json`).then((r) => r.json());
+    const { rate } = await get("/rate.json", fetch);
+    props.rate = rate;
 
     if (!props.artwork)
       return {
@@ -41,7 +44,7 @@
     updateArtworkWithRoyaltyRecipients,
   } from "$queries/artworks";
   import { api, query } from "$lib/api";
-  import { fee, password, sighash, prompt, psbt } from "$lib/store";
+  import { fee, password, sighash, prompt, psbt, rate as r } from "$lib/store";
   import { requirePassword } from "$lib/auth";
   import { createTransaction } from "$queries/transactions";
   import {
@@ -79,7 +82,7 @@
   import Select from "svelte-select";
   import branding from "$lib/branding";
 
-  export let artwork, default_royalty_recipients, user;
+  export let artwork, default_royalty_recipients, user, rate;
 
   let input;
   let initialized;
@@ -99,6 +102,23 @@
     royalty_recipients;
 
   let reserve_price;
+
+  let getExchangeRate = async () => {
+    try {
+      $r = (await get("/rate.json", fetch)).rate;
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  getExchangeRate();
+
+  let rateInterval;
+  clearInterval(rateInterval);
+  rateInterval = setInterval(getExchangeRate, 30000);
+
+  $: exchangeRate = $r;
+  $: fiat_price = (list_price * exchangeRate).toFixed(2);
 
   if (!artwork.asking_asset) artwork.asking_asset = btc;
   auction_enabled =
@@ -480,11 +500,17 @@
                 bind:this={input}
                 disabled={auction_underway}
               />
+
               <div
-                class="absolute inset-y-0 right-0 flex items-center mr-2 mt-4"
+                class="text-white absolute top-[50px] right-5 flex items-center"
               >
                 {assetLabel(artwork.asking_asset)}
               </div>
+              <p
+                class="rounded-lg border border-black p-2 px-5 flex justify-between"
+              >
+                ${fiat_price > 0 ? fiat_price : "..."} <span>USD</span>
+              </p>
             </div>
           </div>
           {#if user.id === artwork.artist_id}

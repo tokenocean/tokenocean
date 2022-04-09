@@ -28,6 +28,7 @@ export const pending = writable();
 export const poll = writable([]);
 export const prompt = writable();
 export const psbt = writable();
+export const rate = writable();
 export const results = writable([]);
 export const show = writable();
 export const sighash = writable();
