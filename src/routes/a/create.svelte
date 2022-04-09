@@ -184,7 +184,7 @@
 
 <div class="container mx-auto py-20">
   <div
-    class="w-full mx-auto max-w-5xl bg-secondary text-offblack md:p-14 rounded-xl submitArtwork boxShadow"
+    class="w-full mx-auto max-w-5xl bg-secondary text-offblack md:p-14 rounded-xl submitArtwork boxShadow p-2"
   >
     <a
       class="block mb-6 text-offblack"
@@ -215,7 +215,7 @@
               showDetails={false}
               thumb={false}
             />
-            <div class="w-full bg-grey-light p-8">
+            <div class="hidden md:block w-full bg-grey-light p-8">
               <div
                 class="text-white font-light p-4 mx-auto max-w-xs text-center"
                 class:bg-primary={percent >= 100 && artwork.filename}
