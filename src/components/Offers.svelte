@@ -138,7 +138,7 @@
               </div>
               <a
                 href={`/${offer.transaction.user.username}`}
-                class="secondary-color py-3"
+                class="hidden md:block secondary-color py-3"
                 >@{offer.transaction.user.username}</a
               >
             </div>
@@ -226,7 +226,7 @@
               </div>
               <a
                 href={`/${offer.transaction.user.username}`}
-                class="secondary-color py-3"
+                class="hidden md:block secondary-color py-3"
                 >@{offer.transaction.user.username}</a
               >
             </div>
@@ -254,7 +254,7 @@
               <a
                 href="/"
                 on:click|preventDefault={() => cancel(offer.transaction)}
-                class="rounded-full bg-gray-100 border px-4 py-2"
+                class="rounded-full bg-gray-100 text-offblack border px-4 py-2"
               >
                 Cancel
               </a>
