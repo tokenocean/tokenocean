@@ -174,7 +174,7 @@
 
       goto(`/a/${slug}`);
       info(
-        "Artwork created successfully! Please wait 120 seconds and then you can list on the market."
+        "Artwork created successfully! Please wait up to 120 seconds and then you can list on the market."
       );
     } catch (e) {
       console.log(e);
