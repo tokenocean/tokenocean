@@ -59,8 +59,8 @@ Anyone can adapt the platform to host their own Liquid-based NFT site.
     hasura metadata apply
     hasura seeds apply
     hasura metadata reload
-    sudo cp ../static/user.png storage/QmRufapYwRWXh4Lkxv8ctUSJazCKpVPeUKvwsZHDso7ZiW
-    docker exec -it ipfs ipfs add /export/QmRufapYwRWXh4Lkxv8ctUSJazCKpVPeUKvwsZHDso7ZiW
+    sudo cp ../static/user.png storage/QmcbyjMMT5fFtoiWRJiwV8xoiRWJpSRwC6qCFMqp7EXD4Z
+    docker exec -it ipfs ipfs add /export/QmcbyjMMT5fFtoiWRJiwV8xoiRWJpSRwC6qCFMqp7EXD4Z
     docker restart lapp
     cd ..
     pnpm dev   # site is available at http://localhost:3000/
