@@ -18,7 +18,7 @@ const BRANDING = {
     keywords: "Bitcoin Liquid NFT Art",
     description:
       "Upload, collect, and transact rare digital art on the Liquid Network",
-    image: "https://market.tokenocean.io/logo_default.png",
+    image: "https://market.tokenocean.io/favicon.png",
     url: "https://market.tokenocean.io/",
 
     twitter: {
