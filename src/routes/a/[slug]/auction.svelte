@@ -105,7 +105,7 @@
 
   let getExchangeRate = async () => {
     try {
-      $r = (await get("/rate.json", fetch)).rate;
+      $r = await get("/rate.json", fetch);
     } catch (e) {
       console.log(e);
     }
@@ -117,8 +117,11 @@
   clearInterval(rateInterval);
   rateInterval = setInterval(getExchangeRate, 30000);
 
-  $: exchangeRate = $r;
-  $: fiat_price = (list_price * exchangeRate).toFixed(2);
+  $: exchangeRateUSD = $r && $r.rateUSD;
+  $: exchangeRateCAD = $r && $r.rateCAD;
+  $: fiat_priceUSD = (list_price * exchangeRateUSD).toFixed(2);
+  $: fiat_priceCAD = (list_price * exchangeRateCAD).toFixed(2);
+  let fiat = "USD";
 
   if (!artwork.asking_asset) artwork.asking_asset = btc;
   auction_enabled =
@@ -506,11 +509,33 @@
               >
                 {assetLabel(artwork.asking_asset)}
               </div>
-              <p
-                class="rounded-lg border border-black p-2 px-5 flex justify-between"
-              >
-                ${fiat_price > 0 ? fiat_price : "..."} <span>USD</span>
-              </p>
+              <div class="flex w-full space-x-2">
+                {#if fiat === "USD"}
+                  <p
+                    class="w-full rounded-lg border border-black p-2 px-5 flex justify-between"
+                  >
+                    ${fiat_priceUSD > 0 ? fiat_priceUSD : "..."}
+                    <span>USD</span>
+                  </p>
+                {:else if fiat === "CAD"}
+                  <p
+                    class="w-full rounded-lg border border-black p-2 px-5 flex justify-between"
+                  >
+                    ${fiat_priceCAD > 0 ? fiat_priceCAD : "..."}
+                    <span>CAD</span>
+                  </p>
+                {/if}
+                <svg
+                  on:click={() =>
+                    fiat === "USD" ? (fiat = "CAD") : (fiat = "USD")}
+                  class="w-6 cursor-pointer"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  ><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
+                    d="M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z"
+                  /></svg
+                >
+              </div>
             </div>
           </div>
           {#if user.id === artwork.artist_id}
