@@ -1,12 +1,13 @@
-const { keypair, parse, sign } = require("./wallet");
-const { hasura } = require("./api");
-const { parseISO, isWithinInterval } = require("date-fns");
-const { address: Address } = require("liquidjs-lib");
-
-const wretch = require("wretch");
-const fetch = require("node-fetch");
+import { keypair, parse, sign } from "./wallet.js";
+import { hasura } from "./api.js";
+import { parseISO, isWithinInterval } from "date-fns";
+import { address as Address } from "liquidjs-lib";
+import wretch from "wretch";
+import fetch from "node-fetch";
 wretch().polyfills({ fetch });
 const { HASURA_URL } = process.env;
+import { app } from "./app.js";
+import { auth } from "./auth.js";
 
 const query = `
   query($assets: [String!]) {
@@ -62,7 +63,7 @@ app.post("/sign", auth, async (req, res) => {
   }
 });
 
-const check = async (psbt) => {
+export const check = async (psbt) => {
   const [txid, inputs, outputs] = await parse(psbt);
 
   const multisig = (
@@ -151,11 +152,11 @@ const check = async (psbt) => {
             (o) => o.asset === asset && !multisig.includes(o.address)
           )
         ) {
-          throw new Error("Unrecognized recipient address");
+          throw new Error(
+            "Token cannot be transferred to an external address when royalties are activated or auction is underway."
+          );
         }
       }
     }
   );
 };
-
-module.exports = { check };

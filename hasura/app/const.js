@@ -1,9 +1,9 @@
-module.exports = {
-  projectName: "Token Ocean",
+export default {
+  projectName: "Raretoshi",
   urls: {
-    protocol: "https://market.tokenocean.io",
+    protocol: "https://raretoshi.com",
   },
   emails: {
-    support: "support@tokenocean.io",
+    support: "support@raretoshi.com",
   },
 };
