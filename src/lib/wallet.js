@@ -49,7 +49,7 @@ export const ACCEPTED = "accepted";
 
 const { retry } = middlewares.default || middlewares;
 
-const DUST = 800;
+export const DUST = 800;
 const satsPerByte = 0.15;
 
 const serverKey = Buffer.from(import.meta.env.VITE_PUBKEY, "hex");
@@ -625,6 +625,7 @@ export const pay = async (artwork, to, amount) => {
 
   addFee(p2);
 
+  psbt.set(p2);
   return p2;
 };
 
@@ -805,20 +806,22 @@ export const createIssuance = async (
     issuer_pubkey: keypair().pubkey.toString("hex"),
     name,
     precision: 0,
-    ticker: "DANG",
+    ticker: null,
     version: 0,
   };
 
-  let without = { ...contract };
-  delete without.file;
+  console.log(tx.getId(), tx.vout);
 
   let construct = async (p) => {
     if (tx) {
-      let index = tx.outs.findIndex(
-        (o) =>
-          parseAsset(o.asset) === btc &&
-          o.script.toString("hex") === out.output.toString("hex")
-      );
+      let txid = tx.getId();
+      let index =
+        tx.vout ||
+        tx.outs.findIndex(
+          (o) =>
+            parseAsset(o.asset) === btc &&
+            o.script.toString("hex") === out.output.toString("hex")
+        );
 
       if (index > -1) {
         let input = {
@@ -868,7 +871,7 @@ export const createIssuance = async (
 };
 
 export const getInputs = async () => {
-  let utxos = await electrs
+  let utxos = await api
     .url(`/address/${singlesig().address}/utxo`)
     .get()
     .json();
@@ -876,7 +879,9 @@ export const getInputs = async () => {
   let txns = [];
   let a = utxos.filter((o) => o.asset === btc && o.value > DUST);
   for (let i = 0; i < a.length; i++) {
-    txns.push(Transaction.fromHex(await getHex(a[i].txid)));
+    let tx = Transaction.fromHex(await getHex(a[i].txid));
+    tx.vout = a[i].vout;
+    txns.push(tx);
   }
 
   return [txns, utxos.reduce((a, b) => a + b.value, 0)];
@@ -891,6 +896,7 @@ export const signOver = async ({ asset }, tx) => {
       .get()
       .json();
     let prevout = utxos.find((o) => o.asset === asset);
+
     let hex = await getHex(prevout.txid);
     tx = Transaction.fromHex(hex);
   }
@@ -907,7 +913,7 @@ export const signOver = async ({ asset }, tx) => {
   });
 
   psbt.set(p);
-  sign(noneAnyoneCanPay);
+  await sign(noneAnyoneCanPay);
   return tx;
 };
 
