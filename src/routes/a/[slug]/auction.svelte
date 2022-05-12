@@ -1,4 +1,5 @@
 <script context="module">
+  import { get } from "$lib/api";
   export async function load({ fetch, params: { slug }, session }) {
     if (!(session && session.user))
       return {
