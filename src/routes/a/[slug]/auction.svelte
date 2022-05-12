@@ -1,5 +1,4 @@
 <script context="module">
-  import { get } from "$lib/api";
   export async function load({ fetch, params: { slug }, session }) {
     if (!(session && session.user))
       return {
@@ -278,22 +277,19 @@
 
       let base64, tx;
 
-      console.log("ROYALTY", royalty_value);
-      if (royalty_value) {
-        tx = await signOver(artwork, tx);
+      if (artwork.held === "multisig") {
+        tx = await signOver(artwork);
+        await tick();
         artwork.auction_tx = $psbt.toBase64();
       } else {
-        console.log("HERE");
         $psbt = await sendToMultisig(artwork);
-        console.log("BERE");
         $psbt = await signAndBroadcast();
         base64 = $psbt.toBase64();
         tx = $psbt.extractTransaction();
-        console.log("HERE");
 
         tx = await signOver(artwork, tx);
+        await tick();
         artwork.auction_tx = $psbt.toBase64();
-        console.log("HERE");
 
         artwork.auction_release_tx = (
           await createRelease(artwork, tx)
@@ -314,6 +310,7 @@
       if (base64) $psbt = Psbt.fromBase64(base64);
     }
 
+    artwork.held = "multisig";
     artwork.auction_start = start;
     artwork.auction_end = end;
   };
@@ -343,6 +340,8 @@
 
     stale = true;
 
+    artwork.held = "multisig";
+
     info("Royalties activated!");
   };
 
@@ -366,6 +365,7 @@
         auction_tx,
         bid_increment,
         extension_interval,
+        held,
         list_price_tx,
         max_extensions,
       } = artwork;
@@ -382,6 +382,7 @@
           auction_tx,
           bid_increment,
           extension_interval,
+          held,
           list_price: sats(artwork.asking_asset, list_price),
           list_price_tx,
           max_extensions,
