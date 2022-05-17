@@ -6,7 +6,7 @@
 
 {#if $session.user}
     <div class="w-full px-5 md:px-0">
-        <p class="mb-6 text-2xl">Welcome!  You'll need a <a href="https://liquid.net/" class="in-text-link">Liquid</a> wallet to use TokenOcean.  Choose an option to get started:</p>
+        <p class="mb-6 text-2xl">Welcome!  You'll need a <a href="https://liquid.net/" class="in-text-link">Liquid</a> wallet to use Token Ocean.  Choose an option to get started:</p>
     <div class="text-center flex flex-col">
       <a href="/wallet/create" class="primary-btn m-1">
         {$session.user.wallet_initialized ? "Backup" : "Create new"}
