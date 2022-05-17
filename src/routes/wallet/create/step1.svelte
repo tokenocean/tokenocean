@@ -15,12 +15,14 @@
   li span {
     margin-left: 20px;
   }
+ .in-text-link {
+     color: #0cf574;
+ }
 </style>
 
 <div class="w-full px-5 md:px-0">
-  <p class="text-xl mb-10">
-    You'll need to know your backup phrase. Some things to have in
-    mind:
+    <p class="text-xl mb-10">
+        You're about to get your twelve-word <a href="https://www.coindesk.com/learn/what-is-a-seed-phrase/" class="in-text-link">seed phrase</a> (also known as your backup phrase).  <strong>Anyone can use this phrase to recreate your wallet and access your money from anywhere on the planet.</strong>  You can use this phrase to restore your wallet if you lose it, but you <em>must</em> keep your seed phrase secret!  Some things to have in mind:
   </p>
 
   <ul class="flex flex-col mb-10">

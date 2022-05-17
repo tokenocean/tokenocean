@@ -90,7 +90,7 @@
 
 <div class="p-5">
   <div class="flex flex-col">
-    <p>Enter your backup phrase in the correct order:</p>
+    <p>Enter the twelve words of your seed/backup phrase in the correct order:</p>
 
     {#if !bulk}
       <div class="text-right mt-5">
